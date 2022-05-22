@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 
 
     <title>ASSIGNMENT</title>
@@ -19,7 +19,21 @@
     <!-- <h1>Test</h1> -->
     <div class="border px-4 pt-4 position-relative text-center w-25">
     <i class="fa fa-user-circle text-info" aria-hidden="true" style="font-size:60px;position:absolute;top:-35px"></i>
-        <h5>I can't wait to create an account</h5>
+    <?php
+    $con= mysqli_connect("localhost","root","","assignment");
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+
+    /* Find and get row*/
+    $select = mysql_query("SELECT * FROM users WHERE email='$email'",$con);
+    if (isset($_POST['submit'])) {
+    $row = mysql_fetch_array($select);
+    if(is_array($row)){
+        $_SESSSION['email']=$_POST['email'];
+    }
+    $email = $row['email'];
+}
+        ?>  
+    <h5>congrat,<?php echo $email?></h5>
         <div class="first my-2 mb-3  d-flex position-relative justify-content-center m-1">
             <div style="position: relative">
                 <input type="text" name="firstname" id="" placeholder="firstname" class="form-control ps-4">
