@@ -17,7 +17,7 @@
     <form action="php/create.php" method="post">
 <div class="d-flex justify-content-center align-items-center" style="height:550px;">
     <!-- <h1>Test</h1> -->
-    <div class="border px-4 pt-4 position-relative text-center w-26">
+    <div class="border px-4 pt-4 position-relative text-center w-25">
     <i class="fa fa-user-circle text-info" aria-hidden="true" style="font-size:60px;position:absolute;top:-35px"></i>
         <h5>I can't wait to create an account</h5>
         <div class="first my-2 mb-3  d-flex position-relative justify-content-center m-1">
@@ -33,16 +33,16 @@
             <div class="position: relative">
                 <div tyle="position: relative">
                     <input type="email" name="email" id="" placeholder="email" class="form-control ps-4">
-                    <i class="fa fa-solid fa-envelope text-info " aria-hidden="true" style="font-size: 20px; position: absolute;top:120px; left: 28px"></i>
+                    <i class="fa fa-solid fa-envelope text-info " aria-hidden="true" style="font-size: 20px; position: absolute;top:144px; left: 28px"></i>
                 <br>
               
                 </div>
                 <div position: relative>
                     
-                    <input type="password" name="password" id="show_pass" placeholder="Choose password" class="form-control ps-4" >
-                    <i class="fa fa-solid fa-key text-info " aria-hidden="true" style="font-size:25px; position: absolute; top: 180px; left: 28px "></i>
-                    <span class="show" onclick="show_pass()"><i class="fa fa-solid fa-eye text-info " aria-hidden="true" style="font-size: 1rem; position: absolute;top: 185px; right: 29px"></i>
-                    </span>
+                    <input type="password" name="password" id="" placeholder="Choose password" class="form-control ps-4">
+                    <i class="fa fa-solid fa-key text-info " aria-hidden="true" style="font-size:25px; position: absolute; top: 200px; left: 28px "></i>
+                    <i class="fa fa-solid fa-eye text-info " aria-hidden="true" style="font-size: 1rem; position: absolute;top: 205px; right: 29px"></i>
+                    
                 </div>
                 
                 <button type="submit" class="btn btn-primary form-control my-2" style="border-radius:30px;" name="submit">Next</button>
@@ -56,13 +56,15 @@
                 <div>
                     <div class="first my-2 mb-3  d-flex position-relative justify-content-center m-1">
                         
-                    <i class="fa fa-google-plus-square" aria-hidden="true" style="position:relative;top10px;font-size: 2rem"></i>
+                    <i class="fa fa-google-plus-square" aria-hidden="true" style="position:relative;top:10px;font-size: 2rem"></i>
                      <div>
-                <button type="submit" class="btn btn-danger form-control p-0">Continue with Google</button>
-                <h6 class="" style="color:red;"><b><i><u>Already have an account?</b></i></u><a style="color:red;" href="login.php">SIGN IN</a>
+                         <button type="submit" class="btn btn-danger form-control p-0">Continue with Google</button>
+                <h6 class="" style="color:red;"><b><i><u>Already have an account</b></i></u> 
+                <a href="login.php">SIGN IN</a> 
                      </div>
                      
-                </div></h6>
+                </div>
+</h6>
                 
                      </div>
             </div>
@@ -87,16 +89,3 @@
     </form>
 </body>
 </html>
-<script>
-      function show_pass(){
-          var x = document.getElementById("show_pass");
-          if(x.type=='password'){
-              x.type = "text";
-              y.style.diplay = "block";
-          }
-          else{
-              x.type = "password";
-              y.style.diplay = "block";
-          }
-      }
-    </script>
