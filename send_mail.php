@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$email = $_SESSION['email'];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -11,12 +12,11 @@ $body=<<< email
 
     <h1>email verification </h1>
     
-    <a href = "http://localhost/assignment/test/Peter/login.php" >verify your account</a>
+    <a href = "http://localhost/work-repo/login.php" >verify your account</a>
 email;
 
 
-try {
-	// $mail->SMTPDebug = 2;									
+try {									
 	$mail->isSMTP(true);											
 	$mail->Host	 = 'smtp.gmail.com;';					
 	$mail->SMTPAuth = true;							
@@ -26,14 +26,14 @@ try {
 	$mail->Port	 = 587;
 
 	$mail->setFrom('jamesofficial31@gmail.com', 'james');		
-	$mail->addAddress('akimanagabriel@gmail.com');
-	
+	$mail->addAddress($email);	
 	$mail->isHTML(true);								
 	$mail->Subject = 'Subject';
 	$mail->Body = $body;
 	$mail->AltBody = 'Body in plain text for non-HTML mail clients';
 	$mail->send();
 	echo "Mail has been sent successfully!";
+	header('location:thanks.php');
 } catch (Exception $e) {
 	echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
