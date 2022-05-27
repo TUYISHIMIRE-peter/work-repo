@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* color: rgb(46, 46, 46); */
     font-family: tahoma;
 }
-.container{
+
+.container {
     background-color: rgb(255, 255, 255);
     width: 100vw;
     height: 100vh;
@@ -14,7 +15,8 @@
     justify-content: center;
     align-items: center;
 }
-.header{
+
+.header {
     background-color: rgb(225, 91, 91);
     width: 100vw;
     padding: 1rem;
@@ -26,69 +28,83 @@
     align-items: center;
     justify-content: space-between;
 }
-.header ul{
+
+.header ul {
     list-style: none;
     cursor: pointer;
 }
-center{
+
+center {
     width: 100%;
 }
-fieldset{
+
+fieldset {
     border: none;
     box-shadow: 1px 2px 5px gray;
     padding: 1rem;
     border-radius: 10px;
     width: 40%;
 }
-legend{
+
+legend {
     background-color: white;
 }
-legend img{
+
+legend img {
     width: 3rem;
     opacity: 0.5;
 }
-img{
+
+img {
     width: 2rem;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
 }
-form span{
+
+form span {
     /* background-color: red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.3rem;
 }
-form span img{
+
+form span img {
     position: absolute;
     margin-top: -1rem;
     margin-left: 1rem;
     opacity: 0.5;
 }
-form span input{
+
+form span input {
     width: 49%;
     padding: 1rem;
     padding-left: 3.5rem;
 }
-form .input_class{
+
+form .input_class {
     /* background-color: green; */
     margin-top: 0.5rem;
     padding: 0.4rem;
 }
-form .input_class input{
+
+form .input_class input {
     width: 100%;
     padding: 1rem;
     padding-left: 3.5rem;
 }
-form .input_class img{
+
+form .input_class img {
     position: absolute;
     margin-left: 1rem;
     margin-top: 0.5rem;
     opacity: 0.5;
 }
-form input[type="submit"]{
+
+form input[type="submit"] {
     background-color: rgb(0, 166, 255);
     border: none;
     width: 98%;
@@ -96,7 +112,8 @@ form input[type="submit"]{
     padding: 1rem;
     color: white;
 }
-.footer{
+
+.footer {
     background-color: rgb(0, 166, 255);
     position: fixed;
     bottom: 0;
@@ -106,15 +123,18 @@ form input[type="submit"]{
     align-items: center;
     color: white;
 }
-.footer ul{
+
+.footer ul {
     list-style: none;
     display: flex;
     padding: 0rem 4rem;
 }
-.footer ul li{
+
+.footer ul li {
     padding: 1.4rem;
 }
-button{
+
+button {
     background-color: rgb(225, 91, 91);
     width: 100%;
     color: white;
@@ -128,44 +148,50 @@ button{
     margin-bottom: 1rem;
     border-radius: 10px;
 }
-button img{
+
+button img {
     background-color: white;
     padding: 0.1rem;
     border-radius: 5px;
     margin-right: 1rem;
 }
-a{
-    color: inherit;
+
+a {
     text-decoration: none;
-    font-weight: 600;
 }
-.uniqueMail{
+
+.uniqueMail {
     background-color: rgb(231, 231, 231);
     border-radius: 100px;
     border: none;
     box-shadow: 1px 2px 3px gray;
 }
-.dashContent{
+
+.dashContent {
     height: 100vh;
     width: 100vw;
     padding: 11vh 1rem 0 1rem;
     display: flex;
     flex-direction: row;
 }
-.dashContent .left{
+
+.dashContent .left {
     width: 60%;
 }
-.dashContent .right{
+
+.dashContent .right {
     width: 40%
 }
-.dashContent .right ul{
+
+.dashContent .right ul {
     display: flex;
     flex-direction: column;
     list-style: none;
     background-color: white;
     padding: 0.5rem;
 }
-.dashContent .right ul li{
+
+.dashContent .right ul li {
     border-bottom: 1px solid rgb(0, 166, 255);
     padding: 0.4rem 2rem
 }

@@ -1,6 +1,7 @@
 <?php
 session_start();
 $email = $_SESSION['email'];
+$token = $_SESSION['token'];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -12,7 +13,7 @@ $body=<<< email
 
     <h1>email verification </h1>
     
-    <a href = "http://localhost/work-repo/login.php" >verify your account</a>
+    <a href = "http://localhost/work-repo/login.php?token=$token" >verify your account</a>
 email;
 
 
